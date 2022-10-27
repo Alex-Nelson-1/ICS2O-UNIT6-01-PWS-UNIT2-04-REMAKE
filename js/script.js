@@ -1,7 +1,5 @@
-// Copyright (c) 2020 Mr. Coxall All rights reserved
-//
-// Created by: Mr. Coxall
-// Created on: Sep 2020
+// Created by: Alex Nelson
+// Created on: Oct 2022
 // This file contains the JS functions for index.html
 
 "use strict"
@@ -15,9 +13,15 @@ if (navigator.serviceWorker) {
   })
 }
 
-/**
- * This function displays an alert.
- */
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+/* Function */
+function calculate() {
+  /* Input */
+  const base = parseInt(document.getElementById("triangleBase").value)
+  const height = parseInt(document.getElementById("triangleHeight").value)
+
+  /* Process */
+  const area = (base * height) / 2
+
+  /* Output */
+  document.getElementById("area").innerHTML = "The area is: " + area + " cm²"
 }
